@@ -108,7 +108,7 @@ export const cart = () => {
                         element: 'a',
                         attribute: {
                             class: 'flex items-center justify-center absolute left-[86%]',
-                            href: '#'
+                            href: '/underConstruction'
                         },
                         children: Box({
                             element: 'img',
@@ -144,7 +144,7 @@ export const cart = () => {
             }),
             Button({
                 parentAttribute: {
-                    class: 'w-80 h-14 rounded-lg mt-6 ',
+                    class: 'w-80 h-14 rounded-lg mt-6 black-1 ',
                     onClick: (e: Event) => {
                         e.preventDefault()
                         location.assign('/checkOut')

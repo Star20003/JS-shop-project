@@ -7,7 +7,10 @@ export const option = (props: optionProps) => {
     return Box({
         element: 'Button',
         attribute: {
-            class: 'flex flex-col items-center'
+            class: 'flex flex-col items-center',
+            onClick: () => {
+                location.assign('/underConstruction')
+            }
         },
         children: [
             Box({

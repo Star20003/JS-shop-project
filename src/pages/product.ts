@@ -76,16 +76,64 @@ export const product = () => {
                             Box({
                                 element: 'div',
                                 attribute:{
-                                    class: 'w-16 h-48 drop-shadow-md rounded-40 bg-white mt-8 flex justify-center items-center'
+                                    class: 'flex flex-col items-center justify-between py-4 w-16 h-48 drop-shadow-md rounded-40 bg-white mt-8 flex justify-center items-center'
                                 },
-                                children:
-                                Box({
-                                    element: 'img',
-                                    attribute:{
-                                        src: '/colors.svg'
-                                    },
-                                    children: ''
-                                })
+                                children:[
+                                    Box({
+                                        element: 'button',
+                                        attribute: {
+                                            class: 'w-10 h-10 rounded-full bg-white border-8 border-neutral-400',
+                                            id: 'platte1',
+                                            type: 'radio',
+                                            onClick: () => {
+                                                if ((document.getElementById('platte1'))?.classList.contains('border-neutral-400')) {
+                                                    (document.getElementById('platte1'))?.classList.remove('border-neutral-400');
+                                                    (document.getElementById('platte1'))?.classList.add('border-neutral-200')
+                                                } else {
+                                                    (document.getElementById('platte1'))?.classList.remove('border-neutral-200');
+                                                    (document.getElementById('platte1'))?.classList.add('border-neutral-400')
+                                                }     
+                                            }
+                                        },
+                                        children: ''
+                                    }),
+                                    Box({
+                                        element: 'button',
+                                        attribute: {
+                                            class: 'w-10 h-10 rounded-full bg-brown1 border-8 border-neutral-200',
+                                            id: 'platte2',
+                                            type: 'radio',
+                                            onClick: () => {
+                                                if ((document.getElementById('platte2'))?.classList.contains('border-neutral-400')) {
+                                                    (document.getElementById('platte2'))?.classList.remove('border-neutral-400');
+                                                    (document.getElementById('platte2'))?.classList.add('border-neutral-200')
+                                                } else {
+                                                    (document.getElementById('platte2'))?.classList.remove('border-neutral-200');
+                                                    (document.getElementById('platte2'))?.classList.add('border-neutral-400')
+                                                }     
+                                            }
+                                        },
+                                        children: ''
+                                    }),
+                                    Box({
+                                        element: 'button',
+                                        attribute: {
+                                            class: 'w-10 h-10 rounded-full bg-brown2 border-8 border-neutral-200',
+                                            id: 'platte3',
+                                            type: 'radio',
+                                            onClick: () => {
+                                                if ((document.getElementById('platte3'))?.classList.contains('border-neutral-400')) {
+                                                    (document.getElementById('platte3'))?.classList.remove('border-neutral-400');
+                                                    (document.getElementById('platte3'))?.classList.add('border-neutral-200')
+                                                } else {
+                                                    (document.getElementById('platte3'))?.classList.remove('border-neutral-200');
+                                                    (document.getElementById('platte3'))?.classList.add('border-neutral-400')
+                                                }     
+                                            }
+                                        },
+                                        children: ''
+                                    })
+                                ]
                             })
                         ]
                     }),
@@ -235,8 +283,11 @@ export const product = () => {
                     Box({
                         element: 'button',
                         attribute:{
-                            class: 'flex items-center justify-center w-14 h-14 rounded-lg',
-                            style: 'background-color: #F0F0F0'
+                            class: 'btn1 flex items-center justify-center w-14 h-14 rounded-lg',
+                            style: 'background-color: #F0F0F0',
+                            onClick: () => {
+                                location.assign('/underConstruction')
+                            }
                         },
                         children: Box({
                             element: 'img',
@@ -248,7 +299,7 @@ export const product = () => {
                     }),
                     Button({
                         parentAttribute: {
-                            class: 'h-14 w-64 rounded-lg ',
+                            class: 'h-14 w-64 rounded-lg black-1 ',
                             onClick: () => {
                                 location.assign('/cart')
                             }
@@ -263,3 +314,4 @@ export const product = () => {
         ]
     })
 } 
+

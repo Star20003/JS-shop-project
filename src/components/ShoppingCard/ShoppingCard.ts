@@ -2,7 +2,7 @@ import { Box } from "../../lib/Box/Box"
 import { cardProps } from "./props"
 
 export const ShoppingCard = (props: cardProps) => {
-    const {image,info,price,direct} = props
+    const {image,info,price,direct,productPage} = props
     return Box({
         element:'div',
         attribute:{
@@ -13,6 +13,9 @@ export const ShoppingCard = (props: cardProps) => {
                 element: 'img',
                 attribute:{
                     src: image,
+                    onClick: () => {
+                        location.assign(productPage)
+                    },
                     class: 'rounded-xl'
                 },
                 children: ''
@@ -49,4 +52,3 @@ export const ShoppingCard = (props: cardProps) => {
         ]
     })
 }
-//<div class="text-sm ff-Nunito top-"></div>

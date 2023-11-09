@@ -3,4 +3,5 @@ export type cardProps = | {
     info?: string;
     price?: string;
     direct?: string;
+    productPage: string;
 } | any

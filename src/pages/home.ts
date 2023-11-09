@@ -89,10 +89,10 @@ export const home = () => {
                 children: [
                     option({
                         icon: '/star.svg',
-                        class: 'black-4 ',
+                        class: 'black-1 ',
                         text: 'Popular',
                         attribute:{
-                            style: 'font-weight:600; color: #242424'
+                            style: 'font-weight:600; color: #242424',
                         } 
                     }),
                     option({
@@ -133,20 +133,21 @@ export const home = () => {
                                 image: '/black-lamp.png',
                                 info: 'Black Simple Lamp',
                                 price: '$ 12.00',
-                                direct: '#'
+                                direct: '#',
                             }),
                             ShoppingCard({
                                 image: '/stand.png',
                                 info: 'Minimal Stand',
                                 price: '$ 25.00',
-                                direct: '/product'
+                                direct: '/product',
+                                productPage: '/product'
                             })
                         ]
                     }),
                     Box({
                         element: 'div',
                         attribute: {
-                            class: 'flex gap-5 mt-4'
+                            class: 'flex mt-4 gap-5'
                         },
                         children:[
                             ShoppingCard({
@@ -188,7 +189,7 @@ export const home = () => {
                     Box({
                         element: 'a',
                         attribute: {
-                            href: '#'
+                            href: '/underConstruction'
                         },
                         children: 
                             Box({
@@ -202,7 +203,7 @@ export const home = () => {
                     Box({
                         element: 'a',
                         attribute: {
-                            href: '#'
+                            href: '/underConstruction'
                         },
                         children: 
                             Box({
@@ -216,7 +217,7 @@ export const home = () => {
                     Box({
                         element: 'a',
                         attribute: {
-                            href: '#'
+                            href: '/underConstruction'
                         },
                         children: 
                             Box({

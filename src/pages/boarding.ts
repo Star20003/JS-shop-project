@@ -33,7 +33,7 @@ export const boarding = () => {
                 onClick: () => {
                     location.assign('/login')
                 },
-                class: 'w-44 h-14 rounded-md '
+                class: 'w-44 h-14 rounded-md black-1 '
             },
             childAttribute:{
                 class: 'ff-Gelasio '
@@ -42,4 +42,5 @@ export const boarding = () => {
         })
     }) ]
 }
-    
+ 
+//<div class="w-8 hover:scale-95 "></div>

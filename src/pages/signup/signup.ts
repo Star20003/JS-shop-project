@@ -161,7 +161,7 @@ export const signup = () => {
                 childChildren: [ 
                     Button({
                         parentAttribute: {
-                            class: 'w-64 h-11 rounded-lg mt-5 ',
+                            class: 'w-64 h-11 rounded-lg mt-5 black-1 ',
                             onClick: (e: Event) => {
                                 e.preventDefault()
                                 if (signupFormValidation(registerForm) === true) {

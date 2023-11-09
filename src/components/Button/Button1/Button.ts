@@ -6,7 +6,7 @@ export const Button = (props : ButtonProps ) => {
         element: 'button',
         attribute: {
             ...props.parentAttribute,
-            class: props.parentAttribute.class + 'flex justify-center items-center black-1 btn-shadow'
+            class: props.parentAttribute.class + 'btn1 flex justify-center items-center btn-shadow'
         },
         children: Box({
             element: 'span',

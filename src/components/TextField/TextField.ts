@@ -3,7 +3,7 @@ import { TextFieldProps } from "./props"
 
 
 export const TextField = (props : TextFieldProps) => {
-    const {label, children, ...restprops} = props
+    const {label, helperText, children, ...restprops} = props
     return Box({
         element: 'div',
         attribute: {
@@ -32,7 +32,7 @@ export const TextField = (props : TextFieldProps) => {
                 element: 'div',
                 attribute:{},
                 children: props.children
-                })
+            })
         ]
     })
 }

@@ -2,10 +2,12 @@ import {Box} from '../../lib/Box/Box'
 import {boarding} from '../../pages/boarding'
 import { cart } from '../../pages/cart'
 import { checkOut } from '../../pages/checkOut'
+import { congrats } from '../../pages/congrats'
 import { home } from '../../pages/home'
 import { login } from '../../pages/login/login'
 import { product } from '../../pages/product'
 import { signup } from '../../pages/signup/signup'
+import { underConstruction } from '../../pages/underConstruction'
 
 export const Layout = () => {
     let isLoggedIn = !!parseInt(localStorage.getItem('login') as string)
@@ -65,6 +67,22 @@ export const Layout = () => {
                 class: 'w-96 p-8 bg-white shadow-md',
             },
             children: checkOut()
+        })
+    } else if (location.pathname === '/congrats') {
+        if (isLoggedIn) return Box ({
+            element: 'div',
+            attribute: {
+                class: 'w-96 p-8 bg-white shadow-md',
+            },
+            children: congrats()
+        })
+    } else {
+        return Box ({
+            element: 'div',
+            attribute: {
+                class: 'w-96 p-8 decoration-bg shadow-md',
+            },
+            children: underConstruction()
         })
     }
 }

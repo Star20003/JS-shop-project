@@ -11,6 +11,7 @@ export const login = () => {
         email: "" ,
         password: "",
     }
+
     return Box ({
         element: 'div',
         attribute : {
@@ -90,9 +91,10 @@ export const login = () => {
                 parentChildren: [
                     TextField({
                         label: 'Email',
+                        id: 'email',
                         onKeyup: (e: Event) => {
                             loginForm.email = (e.target as HTMLInputElement).value
-                        }
+                        },
                     }),
                     TextField({
                         label: 'Password',
@@ -131,13 +133,13 @@ export const login = () => {
                     element: 'a',
                     attribute: {
                         class: 'ff-Nunito text-md font-semibold black-2',
-                        href: '/login'
+                        href: '/underConstruction'
                     },
                     children: 'Forgot Password'
                     }),
                     Button({
                         parentAttribute: {
-                            class: 'w-64 h-11 rounded-lg mt-7 ',
+                            class: 'w-64 h-11 rounded-lg mt-7 black-1 ',
                             onClick: (e: Event) => {
                                 e.preventDefault()
                                 handleLoginUser(loginForm)
